@@ -61,6 +61,8 @@ static char	*ft_return_line(char *remainder, char *line)
 	int		i;
 	char	*buf;
 
+	if (line == NULL)
+		return (NULL);
 	i = 0;
 	while (line[i] != '\0')
 	{
