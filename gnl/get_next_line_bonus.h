@@ -22,9 +22,5 @@ void		*ft_memcpy(void	*dest, const void	*src, size_t n);
 char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
-static char	*ft_check_remainder(char *remainder);
-static char	*ft_concatenation(char *remainder, char *line, char *buf);
-static char	*ft_return_line(char *remainder, char *line);
-static char	*ft_end_of_file(char *remainder, char *line, char *buf);
 
 #endif

@@ -104,11 +104,12 @@ char	*get_next_line(int fd)
 		return (line);
 	while (1)
 	{
-		r = 0;
 		buf = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-		while (r != BUFFER_SIZE + 1)
-			buf[r++] = '\0';
+		if (buf == NULL)
+			return (NULL);
 		r = read(fd, buf, BUFFER_SIZE);
+		if (r >= 0)
+			buf[r] = '\0';
 		if (r <= 0)
 			return (ft_end_of_file(remainder, line, buf));
 		line = ft_concatenation(remainder, line, buf);
